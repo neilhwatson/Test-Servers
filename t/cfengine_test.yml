@@ -1,0 +1,12 @@
+hosts:
+   - localhost
+
+cfengine_tests:
+   - test: package
+     package_name: cfengine-community
+     version_is: 3\.6\.5-1
+   - test: process
+     process_name: cf-execd
+     user_is: root
+     count_is: 1
+
